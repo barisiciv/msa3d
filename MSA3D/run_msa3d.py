@@ -102,7 +102,7 @@ def st2_multiprocessing(data, members):
         
 
         
-def run(data_path, msa_path, run_process=False, run_postprocess=True, run_cubebuild=True, N_exposures = 63, rows = 7, columns = 9, N_gmembers = 9, fname = 'reduction', transform_msa = True, run_stage1 = False):
+def run(data_path, msa_path, run_process=False, run_postprocess=True, run_cubebuild=True, N_exposures = 63, rows = 7, columns = 9, N_gmembers = 63, fname = 'reduction', transform_msa = True, run_stage1 = False):
     #data_path = np.sort(glob.glob(data_path_))
     #print(data_path)
     
