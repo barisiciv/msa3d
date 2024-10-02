@@ -146,7 +146,7 @@ We make use of following software in its original form:
 
 2. L.A.Cosmic (Pieter G. Van Dokkum): for its effective outlier/cosmic ray detection and removal capabilities 
 
-    - van Dokkum 2001, PASP, 113, 789, 1420 : `arXiv <https://ui.adsabs.harvard.edu/abs/2001PASP..113.1420V/abstract>`__ , `website <http://www.astro.yale.edu/dokkum/lacosmic/>__`
+    - van Dokkum 2001, PASP, 113, 789, 1420 : `arXiv <https://ui.adsabs.harvard.edu/abs/2001PASP..113.1420V/abstract>`__ , `website <http://www.astro.yale.edu/dokkum/lacosmic/>`__
     - Curtis McCully, Astro-SCRAPPY: `Zenodo DOI <https://zenodo.org/record/1482019>`__
     - `Astro-SCRAPPY GitHub Repository <https://github.com/astroscrappy/astroscrappy>`__
 
