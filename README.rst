@@ -9,6 +9,7 @@ This software was developed for data reduction and cube design for the JWST slit
 It is designed to be applicable for any future JWST slit-stepping surveys employing a similar observing strategy.
 
 The software consists of two components:
+
 a) the version 1.14.0 ``jwst`` STScI pipeline to process the data via a modified set of arguments and keywords, and 
 b) the original software developed for cube design in a slit-stepping strategy with NIRSpec MSA 
 - the latter being an unsupported data processing mode in the standard STScI pipeline.  
