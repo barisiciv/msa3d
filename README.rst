@@ -144,12 +144,12 @@ In development of MSA3D, apart from original cube building software, we make use
 
 1. STScI ``jwst`` package (v.1.14.0) : for data processing in stages 2-3 (optional stage 1)
 
-    - `Zenodo DOI <https://zenodo.org/badge/latestdoi/60551519>`__
+    - `Zenodo DOI <https://zenodo.org/badge/latestdoi/60551519>`__ , `JWST docs <https://jwst-docs.stsci.edu/jwst-science-calibration-pipeline#JWSTScienceCalibrationPipeline-Stage1pipeline>`__
     - `JWST Calibration Pipeline GitHub Repository <https://github.com/spacetelescope/jwst?tab=readme-ov-file>`__
 
 2. NSClean (Benjamin Rauscher) : for residual correlated noise removal in \*_rate.fits files
 
-    - B. J. Rauscher 2023 : `arXiv <10.48550/arXiv.2306.03250>`__ , algorithm `download <https://science.nasa.gov/mission/webb/for-scientists/#NSClean>`__
+    - B. J. Rauscher 2023 : `arXiv <10.48550/arXiv.2306.03250>`__ , algorithm `website <https://science.nasa.gov/mission/webb/for-scientists/#NSClean>`__
 
 3. L.A.Cosmic (Pieter G. Van Dokkum): for its effective outlier/cosmic ray detection and removal capabilities 
 
