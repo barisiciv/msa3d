@@ -157,10 +157,15 @@ Parent directory in this example is ``JWST``. The resulting folder structure wou
     JWST               # Parent directory
     │
     ├── reduction/     # Subdirectory of JWST
-    │   ├── cubes/     # Subdirectory of reduction containing output cubes of individual targets
-    │   │   └── cube_[target_ID]/  # Directory for cube data
+    │   ├── cubes/     # Subdirectory of reduction containing output cubes 
+    │   │   └── cube_[target_ID]/  # Directory for cube data of a individual targets
+    │   │       └── cube_medians_[target_ID].fits	# File containing a [target_ID] cube 
+    │   │       └── median_lam*_s[target_ID]_all.fits	# Files containing median 2D spectra for a given dispersion step 
+    │   │       └── spec_lam*_s[target_ID]_all.fits	# Files containing stacked 2D spectra for a given dispersion step
     │   └── process/   # Subdirectory of reduction containing individual exposure folders
-    │       └── exp_[exposure_ID]_nobar/  # Directory for 2D spectra of individual targets for a given exposure
+    │   │   └── exp_[exposure_ID]_nobar/  # Directory for 2D spectra of individual targets for a given exposure
+    │   │       └── newoutput_s[target_ID]_s2d_pathcorr_astrocorr.fits	# Files (relevant) representing output 2D spectra for a [target_ID] incl. post-processing, to be used in ``cube_build`` step
+    │   │       └── ...
 
 
 Acknowledgements
