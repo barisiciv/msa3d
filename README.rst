@@ -100,7 +100,8 @@ To run the pipeline, follow these steps:
 2. Define the following variables:
 
    - ``data_entries``: This variable should hold the path to a set of \*_rate.fits files.
-   - ``msa_path``: This variable should be the path to the MSA file located in the **same** directory as the \*_rate.fits files.
+   - ``msa_path``: This variable should be the path to the MSA file. 
+Note: **MSA file needs to be located in the same directory as the \*_rate.fits files.**
 
 3. Call the ``run`` function, passing following arguments: ``data_entries``, ``msa_path``, ``run_process``, ``run_postprocess`` and ``run_cubebuild``. The ``run`` function will perform data reduction, starting from the Spec2Pipeline and Spec3Pipeline reduction provided by the standard STScI reduction pipeline, followed by post-processing and cube design.
 
@@ -116,7 +117,7 @@ Arguments:
     ### EXAMPLE CODE
     from run_msa3d import *
 
-    ### paths below are examples
+    ### example paths below 
     data_entries = np.sort(glob.glob('/home/user/GO-2136/JWST/jw*rate.fits'))
     msa_path = '/home/user/GO-2136/JWST/jw02136001001_01_msa.fits'
 
@@ -138,10 +139,35 @@ In this example, ``N_gmembers=9`` specifies a number of exposures per group. For
 **Note:** the value for ``N_gmember=9`` was chosen **for a system with 24GB RAM and 8 cores**. 
 
 
+Expected output
+---------------
+
+Running the pipeline will create the following folder structure within the specified parent directory:
+
+For example, if the provided `data_entries` path is:
+
+.. code-block:: python
+
+    np.sort(glob.glob('/home/user/GO-2136/JWST/jw*rate.fits'))
+
+Parent directory in this example is ``JWST``. The resulting structure will be:
+
+.. code-block::
+
+    JWST               # Parent directory
+    │
+    ├── reduction/     # Subdirectory of JWST
+    │   ├── cubes/     # Subdirectory of reduction containing output cubes of individual targets
+    │   │   └── cube_[target_ID]/  # Directory for cube data
+    │   └── process/   # Subdirectory of reduction containing individual exposure folders
+    │       └── exp_[exposure_ID]_nobar/  # Directory for 2D spectra of individual targets for a given exposure
+
+
+
 Acknowledgements
 -----------------
 
-In development of MSA3D, apart from original cube building software, we make use of following packages/tools:
+In development of ``MSA3D``, apart from original cube building software, we make use of following packages/tools:
 
 1. STScI ``jwst`` package (v. 1.14.0) : for data processing in stages 2-3 (optional stage 1)
 
@@ -157,11 +183,6 @@ In development of MSA3D, apart from original cube building software, we make use
     - van Dokkum 2001, PASP, 113, 789, 1420 : `arXiv <https://ui.adsabs.harvard.edu/abs/2001PASP..113.1420V/abstract>`__ , `website <http://www.astro.yale.edu/dokkum/lacosmic/>`__
     - Curtis McCully, Astro-SCRAPPY: `Zenodo DOI <https://zenodo.org/record/1482019>`__
     - `Astro-SCRAPPY GitHub Repository <https://github.com/astropy/astroscrappy?tab=readme-ov-file>`__
-
-
-
-
-
 
 
 
