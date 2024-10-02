@@ -113,6 +113,7 @@ Arguments:
 
 .. code-block:: console
 
+    ### EXAMPLE CODE
     from run_msa3d import *
 
     # paths below are examples
