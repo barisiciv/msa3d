@@ -22,7 +22,7 @@ Citation
 
 If you use MSA3D for your data reduction and/or analysis, please cite the following publication 
 
-    - Barisic et al. 2024 : `arXiv <https://ui.adsabs.harvard.edu/abs/2024arXiv240808350B/abstract>`__ (BibTeX entry here)
+    - Barisic et al. 2024 : `arXiv <https://ui.adsabs.harvard.edu/abs/2024arXiv240808350B/abstract>`__ (BibTeX entry `here <https://ui.adsabs.harvard.edu/abs/2024arXiv240808350B/exportcitation>`)
     - Barisic et al. 2024 : `Zenodo`
 
 
@@ -90,16 +90,17 @@ Running the software
 
 This repository includes a Jupyter notebook to assist users in running the pipeline. Below are detailed instructions for convenience.
 
-## Usage Instructions
+Usage Instructions:
 
 To run the pipeline, follow these steps:
 
-1. Import all functions from the `run_msa3d` module
+1. Import all functions from the ``run_msa3d`` module
 2. Define the following variables:
-   - `data_entries`: This variable should hold the path to a set of `*_rate.fits` files.
-   - `msa_path`: This variable should be the path to the MSA file located in the **same** directory as the `*_rate.fits` files.
 
-3. Call the `run` function, passing following arguments: `data_entries`, `msa_path`, `run_process`, `run_postprocess` and `run_cubebuild`. The `run` function will perform data reduction, starting from the Spec2Pipeline and Spec3Pipeline reduction provided by the standard STScI reduction pipeline, followed by post-processing and cube design.
+   - ``data_entries``: This variable should hold the path to a set of `*_rate.fits` files.
+   - ``msa_path``: This variable should be the path to the MSA file located in the **same** directory as the `*_rate.fits` files.
+
+3. Call the ``run`` function, passing following arguments: ``data_entries``, ``msa_path``, ``run_process``, ``run_postprocess`` and ``run_cubebuild``. The ``run`` function will perform data reduction, starting from the Spec2Pipeline and Spec3Pipeline reduction provided by the standard STScI reduction pipeline, followed by post-processing and cube design.
 
 .. code-block:: console
     ### EXAMPLE CODE
