@@ -142,7 +142,7 @@ In this example, ``N_gmembers=9`` specifies a number of exposures per group. For
 Expected output
 ---------------
 
-Running the pipeline will create the following folder structure within the specified parent directory:
+Running the pipeline will automatically create the following folder structure within the specified parent directory:
 
 For example, if the provided `data_entries` path is:
 
