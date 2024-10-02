@@ -11,7 +11,7 @@ It is designed to be applicable for any future JWST slit-stepping surveys employ
 The software consists of two components:
 a) the version 1.14.0 ``jwst`` STScI pipeline to process the data via a modified set of arguments and keywords, and 
 b) the original software developed for cube design in a slit-stepping strategy with NIRSpec MSA 
---- the latter being an unsupported data processing mode in the standard STScI pipeline.  
+- the latter being an unsupported data processing mode in the standard STScI pipeline.  
 
 See  `Barisic et al. 2024 <https://ui.adsabs.harvard.edu/abs/2024arXiv240808350B/abstract>`__ for
 technical details and a case study analysis of an example target.
@@ -131,9 +131,9 @@ This software includes a multiprocessing functionality to expedite the STScI Spe
     run(data_entries, msa_path, run_process=True, run_postprocess=True, run_cubebuild=True, N_gmembers=9)
 
 
-In this example, N_gmembers=9 specifies a number of exposures per group. For the GO-2136 program -- having a total of 63 exposures, this will create 7 groups (each with 9 exposures). The multiprocessing feature will then utilize 7 workers to process the exposures in parallel.
+In this example, ``N_gmembers=9`` specifies a number of exposures per group. For the GO-2136 program - having a total of 63 exposures, this will create 7 groups (each with 9 exposures). The multiprocessing feature will then utilize 7 workers to process the exposures in parallel.
 
-**Note:** the value for N_gmember=9 was chosen **for a system with 24GB RAM and 8 cores**. 
+**Note:** the value for ``N_gmember=9`` was chosen **for a system with 24GB RAM and 8 cores**. 
 
 
 Acknowledgements
