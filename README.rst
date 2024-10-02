@@ -103,6 +103,14 @@ To run the pipeline, follow these steps:
 3. Call the ``run`` function, passing following arguments: ``data_entries``, ``msa_path``, ``run_process``, ``run_postprocess`` and ``run_cubebuild``. The ``run`` function will perform data reduction, starting from the Spec2Pipeline and Spec3Pipeline reduction provided by the standard STScI reduction pipeline, followed by post-processing and cube design.
 
 
+Arguments:
+
+    - ``run_process=True`` enables ``jwst`` Spec2Pipeline and Spec3Pipeline reduction
+    - ``run_postprocess=True`` enables postprocessing of 2D spectra, inluding pathloss correction and outlier/cosmic ray rejection
+    - ``run_cubebuild=True`` enables cube design 
+
+
+
 .. code-block:: console
     from run_msa3d import *
 
@@ -111,13 +119,6 @@ To run the pipeline, follow these steps:
     msa_path = '/home/user/GO-2136/JWST/jw02136001001_01_msa.fits'
 
     run(data_entries, msa_path, run_process=True, run_postprocess=True, run_cubebuild=True)
-
-
-Arguments:
-
-    - ``run_process=True`` enables ``jwst`` Spec2Pipeline and Spec3Pipeline reduction
-    - ``run_postprocess=True`` enables postprocessing of 2D spectra, inluding pathloss correction and outlier/cosmic ray rejection
-    - ``run_cubebuild=True`` enables cube design 
 
 
 Multiprocessing feature
