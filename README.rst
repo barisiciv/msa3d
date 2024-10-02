@@ -88,13 +88,21 @@ Make sure \_msa.fits file is also downloaded **into the same folder** as the \*_
 Running the software
 ---------------------
 
-We provide a jupyter notebook for guidance on running the pipeline.
+This repository includes a Jupyter notebook to assist users in running the pipeline. Below are detailed instructions for convenience.
 
-For convenience, we also provide instructions below:
+## Usage Instructions
 
-Import all functions from the ``run_msa3d`` module. Define two variables: ``data_entries``, which holds the path to a set of \*_rate.fits files, and ``msa_path``, which holds the path to the MSA file in the **same** directory. Call the run function, passing in the data_entries and msa_path as arguments. This function by default performs data reduction starting from Stage 2 + 3 of the STScI reduction pipeline, followed by post-processing, and cube design.
+To run the pipeline, follow these steps:
+
+1. Import all functions from the `run_msa3d` module
+2. Define the following variables:
+   - `data_entries`: This variable should hold the path to a set of `*_rate.fits` files.
+   - `msa_path`: This variable should be the path to the MSA file located in the **same** directory as the `*_rate.fits` files.
+
+3. Call the `run` function, passing following arguments: `data_entries`, `msa_path`, `run_process`, `run_postprocess` and `run_cubebuild`. The `run` function will perform data reduction, starting from the Spec2Pipeline and Spec3Pipeline reduction provided by the standard STScI reduction pipeline, followed by post-processing and cube design.
 
 .. code-block:: console
+    ### EXAMPLE CODE
 
     from run_msa3d import *
 
@@ -102,17 +110,37 @@ Import all functions from the ``run_msa3d`` module. Define two variables: ``data
     data_entries = np.sort(glob.glob('/home/user/GO-2136/JWST/jw*rate.fits'))
     msa_path = '/home/user/GO-2136/JWST/jw02136001001_01_msa.fits'
 
-    run(data_entries, msa_path)
+    run(data_entries, msa_path, run_process=True, run_postprocess=True, run_cubebuild=True)
 
 
-Software includes multiprocessing functionality to speed up the STScI Stage 2 + 3 reduction steps. To enable this feature, set a desired number of exposures per group by using a parameter ``N_gmembers``, e.g.:
+Arguments:
+
+    - ``run_process=True`` enables ``jwst`` Spec2Pipeline and Spec3Pipeline reduction
+    - ``run_postprocess=True`` enables postprocessing of 2D spectra, inluding pathloss correction and outlier/cosmic ray rejection
+    - ``run_cubebuild=True`` enables cube design 
+
+
+Multiprocessing feature
+-----------------------
+
+This software includes a multiprocessing functionality to expedite the STScI Spec2Pipeline and Spec3Pipeline reduction steps. To enable this feature, use the additional argument ``N_gmembers`` and set it to your desired number of exposures per group. For example:
 
 .. code-block:: console
 
-    run(data_entries, msa_path, N_gmembers=9)
+    run(data_entries, msa_path, run_process=True, run_postprocess=True, run_cubebuild=True, N_gmembers=9)
 
 
-The example value used above specifies a number of exposures per group to 9. In case of GO-2136, there are 63 exposures in total, which will result in 7 groups (with 9 exposures in each). Multiprocessing feature in this case employs '7 workers' to process the exposures in parallel. 
-We note this number was chosen for a system with 24GB RAM and 8 cores. 
+In this example, N_gmembers=9 specifies a number of exposures per group. For the GO-2136 program -- having a total of 63 exposures, this will create 7 groups (each with 9 exposures). The multiprocessing feature will then utilize 7 workers to process the exposures in parallel.
+
+**Note:** the value for N_gmember=9 was chosen **for a system with 24GB RAM and 8 cores**. 
+
+
+Acknowledgements
+-----------------
+
+
+
+
+
 
 
