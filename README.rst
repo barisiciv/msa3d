@@ -149,7 +149,7 @@ In development of MSA3D, apart from original cube building software, we make use
 
 2. NSClean (Benjamin Rauscher) : for residual correlated noise removal in \*_rate.fits files
 
-    - B. J. Rauscher 2023 : `arXiv <10.48550/arXiv.2306.03250>`__ , algorithm `website <https://science.nasa.gov/mission/webb/for-scientists/#NSClean>`__
+    - Rauscher 2023 : `arXiv <10.48550/arXiv.2306.03250>`__ , algorithm `website <https://science.nasa.gov/mission/webb/for-scientists/#NSClean>`__
 
 3. L.A.Cosmic (Pieter G. Van Dokkum): for its effective outlier/cosmic ray detection and removal capabilities 
 
