@@ -41,7 +41,7 @@ To install MSA3D, clone the git repository into a new folder:
 
 .. code-block:: console
 
-    cd <desired destination folder>
+    cd <your destination folder>
     git clone https://github.com/barisiciv/msa3d.git
 
 
@@ -140,16 +140,22 @@ In this example, ``N_gmembers=9`` specifies a number of exposures per group. For
 Acknowledgements
 -----------------
 
-We make use of following software in its original form:
+In development of MSA3D, apart from original cube building software, we make use of following packages/tools:
 
-1.
+1. STScI ``jwst`` package (v.1.14.0) : for data processing in stages 2-3 (optional stage 1)
 
-2. L.A.Cosmic (Pieter G. Van Dokkum): for its effective outlier/cosmic ray detection and removal capabilities 
+    - `Zenodo DOI <https://zenodo.org/badge/latestdoi/60551519>`__
+    - `JWST Calibration Pipeline GitHub Repository <https://github.com/spacetelescope/jwst?tab=readme-ov-file>`__
+
+2. NSClean (Benjamin Rauscher) : for residual correlated noise removal in \*_rate.fits files
+
+    - B. J. Rauscher 2023 : `arXiv <10.48550/arXiv.2306.03250>`__ , algorithm `download <https://science.nasa.gov/mission/webb/for-scientists/#NSClean>`__
+
+3. L.A.Cosmic (Pieter G. Van Dokkum): for its effective outlier/cosmic ray detection and removal capabilities 
 
     - van Dokkum 2001, PASP, 113, 789, 1420 : `arXiv <https://ui.adsabs.harvard.edu/abs/2001PASP..113.1420V/abstract>`__ , `website <http://www.astro.yale.edu/dokkum/lacosmic/>`__
     - Curtis McCully, Astro-SCRAPPY: `Zenodo DOI <https://zenodo.org/record/1482019>`__
     - `Astro-SCRAPPY GitHub Repository <https://github.com/astropy/astroscrappy?tab=readme-ov-file>`__
-
 
 
 
