@@ -6,13 +6,13 @@ About
 -----
 
 This software was developed for data reduction and cube design for the JWST slit-stepping survey GO-2136.
-It is designed to be applicable for any future JWST slit-stepping surveys employing a similar observing strategy.
+It is designed to be applicable for any future JWST slit-stepping surveys that employ a similar observing strategy.
 
-The software consists of two components:
+The software consists of three main components:
 
-a) the version 1.14.0 ``jwst`` STScI pipeline to process the data via a modified set of arguments and keywords, and 
-b) the original software developed for cube design in a slit-stepping strategy with NIRSpec MSA 
-- the latter being an unsupported data processing mode in the standard STScI pipeline.  
+1. ``jwst`` STScI calibration pipeline (v. 1.14.0 ) to (pre- and/or) process the data with a modified set of arguments and keywords
+2. post-processing: includes ``jwst`` pathloss correction and L.A.Cosmic for outlier and cosmic ray treatment
+3. original cube design software: developed for cube design in a slit-stepping strategy with NIRSpec MSA. This is currently an unsupported processing mode in the standard STScI pipeline (Oct 2024).  
 
 See  `Barisic et al. 2024 <https://ui.adsabs.harvard.edu/abs/2024arXiv240808350B/abstract>`__ for
 technical details and a case study analysis of an example target.
@@ -143,7 +143,7 @@ Acknowledgements
 
 In development of MSA3D, apart from original cube building software, we make use of following packages/tools:
 
-1. STScI ``jwst`` package (v.1.14.0) : for data processing in stages 2-3 (optional stage 1)
+1. STScI ``jwst`` package (v. 1.14.0) : for data processing in stages 2-3 (optional stage 1)
 
     - `Zenodo DOI <https://zenodo.org/badge/latestdoi/60551519>`__ , `JWST docs <https://jwst-docs.stsci.edu/jwst-science-calibration-pipeline#JWSTScienceCalibrationPipeline-Stage1pipeline>`__
     - `JWST Calibration Pipeline GitHub Repository <https://github.com/spacetelescope/jwst?tab=readme-ov-file>`__
