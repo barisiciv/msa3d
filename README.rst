@@ -102,9 +102,8 @@ To run the pipeline, follow these steps:
 
 3. Call the ``run`` function, passing following arguments: ``data_entries``, ``msa_path``, ``run_process``, ``run_postprocess`` and ``run_cubebuild``. The ``run`` function will perform data reduction, starting from the Spec2Pipeline and Spec3Pipeline reduction provided by the standard STScI reduction pipeline, followed by post-processing and cube design.
 
-.. code-block:: console
-    # EXAMPLE CODE
 
+.. code-block:: console
     from run_msa3d import *
 
     # paths below are examples
