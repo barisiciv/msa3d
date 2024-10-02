@@ -24,7 +24,19 @@ Citation
 If you use MSA3D for your data reduction and/or analysis, please cite the following publication 
 
     - Barisic et al. 2024 : `arXiv <https://ui.adsabs.harvard.edu/abs/2024arXiv240808350B/abstract>`__ (BibTeX entry `here <https://ui.adsabs.harvard.edu/abs/2024arXiv240808350B/exportcitation>`__ )
-    - Barisic et al. 2024 : `Zenodo`
+    - Barisic et al. 2024 : `Zenodo DOI`
+
+
+Data access
+-----------
+
+The ``msa3d`` data reduction starts with slope images, which can be found on
+`MAST Portal <https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html>`__.
+GO-2136 program is publicly available. Search for the data set on the portal
+using the Proposal ID: 2136 and download all the \*_rate.fits files.
+
+After downloading the \*_rate.fits files, make sure all \*_rate.fits files are in the **same folder**. 
+Make sure \_msa.fits file is also downloaded **into the same folder** as the \*_rate.fits files.
 
 
 Installation
@@ -73,18 +85,6 @@ Total disk space required for full reduction (excluding STScI/Spec1Pipeline) is 
     - 50GB : products of custom JWST/STScI Spec2Pipeline + Spec3Pipeline reduction (2D spectra)
 
     - 12GB : products of cube design (data cubes and related products)
-
-
-Data access
------------
-
-The ``msa3d`` data reduction starts with slope images, which can be found on
-`MAST Portal <https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html>`__.
-GO-2136 program is publicly available. Search for the data set on the portal
-using the Proposal ID: 2136 and download all the \*_rate.fits files.
-
-After downloading the \*_rate.fits files, make sure all \*_rate.fits files are in the **same folder**. 
-Make sure \_msa.fits file is also downloaded **into the same folder** as the \*_rate.fits files.
 
 
 Running the software
