@@ -142,7 +142,7 @@ In this example, ``N_gmembers=9`` specifies a number of exposures per group. For
 Expected output
 ---------------
 
-Running the pipeline will automatically create the following folder structure within the specified parent directory:
+Running the pipeline will automatically create the ``reduction`` folder within the parent directory specified from ``data_entries``.
 
 For example, if the provided `data_entries` path is:
 
@@ -150,7 +150,7 @@ For example, if the provided `data_entries` path is:
 
     np.sort(glob.glob('/home/user/GO-2136/JWST/jw*rate.fits'))
 
-Parent directory in this example is ``JWST``. The resulting structure will be:
+Parent directory in this example is ``JWST``. The resulting folder structure would be: 
 
 .. code-block::
 
@@ -161,7 +161,6 @@ Parent directory in this example is ``JWST``. The resulting structure will be:
     │   │   └── cube_[target_ID]/  # Directory for cube data
     │   └── process/   # Subdirectory of reduction containing individual exposure folders
     │       └── exp_[exposure_ID]_nobar/  # Directory for 2D spectra of individual targets for a given exposure
-
 
 
 Acknowledgements
