@@ -10,7 +10,7 @@ It is designed to be applicable for any future JWST slit-stepping surveys that e
 
 The software consists of three main components:
 
-1. ``jwst`` STScI calibration pipeline (v. 1.14.0 ) to (pre- and/or) process the data with a modified set of arguments and keywords
+1. ``jwst`` STScI calibration pipeline (v1.14.0 ) to (pre- and/or) process the data with a modified set of arguments and keywords
 2. post-processing: includes ``jwst`` pathloss correction and L.A.Cosmic for outlier and cosmic ray treatment
 3. original cube design software: developed for cube design in a slit-stepping strategy with NIRSpec MSA. This is currently an unsupported processing mode in the standard STScI pipeline (Oct 2024).  
 
@@ -175,7 +175,7 @@ Acknowledgements
 
 In development of ``MSA3D`` package, apart from original cube building module, we make use of following packages/tools:
 
-1. STScI ``jwst`` package (v. 1.14.0) : for data processing in stages 2-3 (optional stage 1)
+1. STScI ``jwst`` package (v1.14.0) : for data processing in stages 2-3 (optional stage 1)
 
     - `Zenodo DOI <https://zenodo.org/badge/latestdoi/60551519>`__ , `JWST docs <https://jwst-docs.stsci.edu/jwst-science-calibration-pipeline#JWSTScienceCalibrationPipeline-Stage1pipeline>`__
     - `JWST Calibration Pipeline GitHub Repository <https://github.com/spacetelescope/jwst?tab=readme-ov-file>`__
