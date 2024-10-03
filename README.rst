@@ -152,11 +152,11 @@ For example, if the provided `data_entries` path is:
 
     np.sort(glob.glob('/home/user/GO-2136/JWST/jw*rate.fits'))
 
-Parent directory in this example is ``JWST``. The resulting folder structure would be: 
+Parent directory in this example is ``JWST/``. The resulting folder structure would be: 
 
 .. code-block::
 
-    JWST               # Parent directory
+    JWST/               # Parent directory
     │
     ├── reduction/     # Subdirectory of JWST
     │   ├── cubes/     # Subdirectory of reduction containing output cubes 
