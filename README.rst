@@ -30,7 +30,7 @@ If you use MSA3D for your data reduction and/or analysis, please cite the follow
 Data access
 -----------
 
-The ``msa3d`` data reduction starts with slope images, which can be found on
+The ``MSA3D`` full data reduction starts with slope images, which can be found on
 `MAST Portal <https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html>`__.
 GO-2136 program is publicly available. Search for the data set on the portal
 using the Proposal ID: 2136 and download all the \*_rate.fits files.
@@ -173,7 +173,7 @@ Parent directory in this example is ``JWST/``. The resulting directory structure
 Acknowledgements
 -----------------
 
-In development of ``MSA3D``, apart from original cube building software, we make use of following packages/tools:
+In development of ``MSA3D`` package, apart from original cube building module, we make use of following packages/tools:
 
 1. STScI ``jwst`` package (v. 1.14.0) : for data processing in stages 2-3 (optional stage 1)
 
