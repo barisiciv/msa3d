@@ -35,8 +35,8 @@ The ``msa3d`` data reduction starts with slope images, which can be found on
 GO-2136 program is publicly available. Search for the data set on the portal
 using the Proposal ID: 2136 and download all the \*_rate.fits files.
 
-After downloading the \*_rate.fits files, make sure all \*_rate.fits files are in the **same folder**. 
-Make sure \_msa.fits file is also downloaded **into the same folder** as the \*_rate.fits files.
+After downloading the \*_rate.fits files, make sure all \*_rate.fits files are in the **same directory**. 
+Make sure \_msa.fits file is also downloaded **into the same directory** as the \*_rate.fits files.
 
 
 Installation
@@ -50,15 +50,15 @@ Start by creating a new python environment using conda or venv, example:
     conda activate <env_name>
 
 
-To install MSA3D, clone the git repository into a new folder:
+To install MSA3D, clone the git repository into a new directory:
 
 .. code-block:: console
 
-    cd <your destination folder>
+    cd <your destination directory>
     git clone https://github.com/barisiciv/msa3d.git
 
 
-This pulls the files into a directory called 'msa3d'.  To install the package, run:
+This pulls the files into a directory called ``msa3d/``.  To install the package, run:
 
 .. code-block:: console
 
@@ -144,7 +144,7 @@ In this example, ``N_gmembers=9`` specifies a number of exposures per group. For
 Expected output
 ---------------
 
-Running the pipeline will automatically create the ``reduction`` folder within the parent directory specified from ``data_entries``.
+Running the pipeline will automatically create the ``reduction/`` directory within the parent directory specified from ``data_entries``.
 
 For example, if the provided `data_entries` path is:
 
@@ -152,7 +152,7 @@ For example, if the provided `data_entries` path is:
 
     np.sort(glob.glob('/home/user/GO-2136/JWST/jw*rate.fits'))
 
-Parent directory in this example is ``JWST/``. The resulting folder structure would be: 
+Parent directory in this example is ``JWST/``. The resulting directory structure would be: 
 
 .. code-block::
 
@@ -164,7 +164,7 @@ Parent directory in this example is ``JWST/``. The resulting folder structure wo
     │   │       └── cube_medians_[target_ID].fits	# File containing a [target_ID] cube 
     │   │       └── median_lam*_s[target_ID]_all.fits	# Files containing median 2D spectra for a given dispersion step 
     │   │       └── spec_lam*_s[target_ID]_all.fits	# Files containing stacked 2D spectra for a given dispersion step
-    │   └── process/   # Subdirectory of reduction containing individual exposure folders
+    │   └── process/   # Subdirectory of reduction containing individual exposure directories
     │   │   └── exp_[exposure_ID]_nobar/  # Directory for 2D spectra of individual targets for a given exposure
     │   │       └── newoutput_s[target_ID]_s2d_pathcorr_astrocorr.fits	# Files (relevant) representing output 2D spectra for a [target_ID] incl. post-processing, to be used in ``cube_build`` step
     │   │       └── ...
