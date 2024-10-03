@@ -96,7 +96,7 @@ Usage Instructions:
 
 To run the pipeline, follow these steps:
 
-1. Import all functions from the ``run_msa3d`` module
+1. Import ``run`` function from the ``MSA3D.run_msa3d`` module
 2. Define the following variables:
 
    - ``data_entries``: This variable should hold the path to a set of \*_rate.fits files.
@@ -115,7 +115,9 @@ Arguments:
 .. code-block:: console
 
     ### EXAMPLE CODE
-    from run_msa3d import *
+    from MSA3D.run_msa3d import run
+    import numpy as np
+    import glob
 
     ### example paths below 
     data_entries = np.sort(glob.glob('/home/user/GO-2136/JWST/jw*rate.fits'))
