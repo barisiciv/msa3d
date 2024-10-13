@@ -24,7 +24,7 @@ Citation
 If you use MSA3D for your data reduction and/or analysis, please cite the following publication 
 
     - Barisic et al. 2024 : `arXiv <https://ui.adsabs.harvard.edu/abs/2024arXiv240808350B/abstract>`__ (BibTeX entry `here <https://ui.adsabs.harvard.edu/abs/2024arXiv240808350B/exportcitation>`__ )
-    - Barisic et al. 2024 : `Zenodo DOI`
+    - Barisic et al. 2024 : `Zenodo DOI <https://doi.org/10.5281/zenodo.13924476>`__
 
 
 Data access
